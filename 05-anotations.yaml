@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: annotations
+  annotations: 
+    imageregistry: https://hub.docker.com/
+    buildurl: https://github.com/aravindkumar66/k8-resources
+    
+spec:
+  containers: 
+  - name: nginx
+    image: nginx
