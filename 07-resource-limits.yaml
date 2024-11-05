@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: annotations
   annotations: 
-    argocd.argoproj.io/sync-options: --Validate=false
+    argocd.argoproj.io/sync-options: --validate=false
   name: limits
 spec:
   containers:
