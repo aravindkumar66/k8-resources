@@ -1,6 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  name: annotations
+  annotations: 
+    argocd.argoproj.io/sync-options: Validate=false
   name: limits
 spec:
   containers:
@@ -13,4 +16,3 @@ spec:
       limits: 
         cpu: 120m
         memory: 100Mi
-        
