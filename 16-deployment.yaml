@@ -25,16 +25,18 @@ spec:
       - name: nginx
         image: nginx:stable-perl
 ---
-# kind: Service
-# apiVersion: v1
-# metadata:
-#   name: nginx
-# spec: 
-#   selector: 
-#     tier: frontend
-#     app: nginx
-#   ports:
-#   - name: nginx-svc-port
-#     protocol: TCP
-#     port: 80 #service port
-#     targetPort: 80 #container port
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx
+spec: 
+  type: NodePort
+  selector: 
+    tier: frontend
+    app: nginx
+  ports:
+  - name: nginx-svc-port
+    protocol: TCP
+    port: 80 #service port
+    targetport: 80
+    nodePort: 30010 #container port
