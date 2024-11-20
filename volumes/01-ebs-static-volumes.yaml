@@ -36,6 +36,7 @@ spec:
     volumeMounts: # docker ru -v hostpath:containerpath
     - name: ebs-static
       mountPath: /usr/share/nginx/html
+  volumes:
   - name: ebs-static
     persistentVolumeClaim:
       claimName: ebs-static
