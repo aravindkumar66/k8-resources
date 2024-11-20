@@ -33,7 +33,7 @@ spec:
   containers:
   - name: nginx
     image: nginx
-    volumeMounts: # docker run -v hostpath:containerpath
+    volumeMounts: # docker ru -v hostpath:containerpath
     - name: ebs-static
       mountPath: /usr/share/nginx/html
   - name: ebs-static
